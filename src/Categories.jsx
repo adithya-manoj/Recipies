@@ -1,8 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 
 function Categories() {
@@ -21,8 +20,8 @@ function Categories() {
     <h2 className='text-center m-3 p-3'>Categories</h2>
       <div className='d-flex flex-wrap m-3 justify-content-center '>
 
-        {category.map((item)=>(
-          <Link to={`/categories/${item.strCategory}`}>
+        {category.map((item,index)=>(
+          <Link key={index} to={`/categories/${item.strCategory}`}>
 
           <Card style={{ width: '18rem', margin:'1rem'}}>
       <Card.Img variant="top" src={item.strCategoryThumb} />

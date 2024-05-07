@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from 'react-router-dom';
 
 function NavbarComp() {
   const [show, setShow] = useState(false);
@@ -49,8 +50,9 @@ function NavbarComp() {
       </Offcanvas>
       </Nav>
       <Container>
-
-        <Navbar.Brand href="#home">Yummy</Navbar.Brand>
+<Link to='/' className='text-decoration-none'>
+        <Navbar.Brand>Yummy</Navbar.Brand>
+</Link>
 
         <Nav className="ms-auto">
 
