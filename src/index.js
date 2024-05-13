@@ -7,8 +7,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import CategoryItems from './CategoryItems';
 import Itemrecipe from './Itemrecipe';
+import  store from './Store'
+import { Provider } from 'react-redux'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={store}>
+
   <React.StrictMode>
     <BrowserRouter>
       <NavbarComp />
@@ -19,4 +24,5 @@ root.render(
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
+  </Provider>
 );

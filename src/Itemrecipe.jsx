@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { FaHeart } from "react-icons/fa";
 
 function Itemrecipe() {
     const { recipe } = useParams();
@@ -24,7 +25,7 @@ function Itemrecipe() {
         <div>
             {recipedetail.map((item) => (
                 <div key={item.idMeal}>
-                    <h1 className='text-center'>{item.strMeal}</h1>
+                    <h1 className='text-center'>{item.strMeal} <FaHeart /></h1>
                     <div className='d-flex justify-content-center p-3 m-3'>
                         <img src={item.strMealThumb} alt={item.strMeal} className='w-25 h-25 rounded-2'/>
                     </div>
